@@ -1,64 +1,35 @@
-📋 Requisitos e Instalação
+*📋 Requisitos e Instalação*
 
-Para executar este programa, você precisará ter o Python e algumas bibliotecas adicionais instaladas em seu computador. Siga os passos abaixo.
-
-
-Pré-requisitos
-
-
-Python 3: É necessário ter o Python (versão 3.6 ou mais recente) instalado. O Python já vem com o gerenciador de pacotes pip, que usaremos para instalar as dependências.
-
-Se você não tem o Python, baixe-o gratuitamente no site oficial: python.org
+ Para executar este programa, você precisará ter o Python e algumas bibliotecas adicionais instaladas em seu computador. Siga os passos abaixo.
 
 
 
+*Pré-requisitos*
 
-Passos para Instalação
+  - *Python 3:* É necessário ter o Python (versão 3.6 ou mais recente) instalado. O Python já vem com o gerenciador de pacotes `pip`, que usaremos para instalar as dependências. - Se você não tem o Python, baixe-o gratuitamente no site oficial: [python.org](https://www.python.org/)
+ 
 
+*Passos para Instalação*
 
-Obtenha o Código-Fonte:
+  - *Obtenha o Código-Fonte:*
 
+  - Vá até a página principal deste repositório no GitHub.
+ - Clique no botão verde *"< > Code"*.
+ - Selecione *"Download ZIP"* e salve o arquivo no seu computador.
+ - Extraia o conteúdo do arquivo ZIP em uma pasta de sua preferência.
+ - *Abra um Terminal:*
 
+  - *Windows:* Pressione a tecla `Windows`, digite `cmd` ou `PowerShell` e pressione Enter.
+ - *macOS/Linux:* Abra o aplicativo "Terminal".
+ - *Navegue até a Pasta do Projeto:*
 
-Vá até a página principal deste repositório no GitHub.
+  - Use o comando `cd` (change directory) para entrar na pasta que você acabou de extrair.
+ - _Exemplo:_ Se você extraiu na sua Área de Trabalho, o comando seria: `cd Desktop/nome-da-pasta-do-projeto`
+ - *Instale as Dependências:*
 
-Clique no botão verde "< > Code".
-
-Selecione "Download ZIP" e salve o arquivo no seu computador.
-
-Extraia o conteúdo do arquivo ZIP em uma pasta de sua preferência.
-
-
-
-Abra um Terminal:
-
-
-
-Windows: Pressione a tecla Windows, digite cmd ou PowerShell e pressione Enter.
-
-macOS/Linux: Abra o aplicativo "Terminal".
-
-
-
-Navegue até a Pasta do Projeto:
-
-
-
-Use o comando cd (change directory) para entrar na pasta que você acabou de extrair.
-
-Exemplo: Se você extraiu na sua Área de Trabalho, o comando seria: cd Desktop/nome-da-pasta-do-projeto
-
-
-
-Instale as Dependências:
-
-
-
-Com o terminal aberto na pasta correta, execute o comando abaixo para instalar as bibliotecas que o script precisa para funcionar. Este comando instalará mnemonic, bip_utils e qrcode com seu complemento de imagem.
-
-
+  - Com o terminal aberto na pasta correta, execute o comando abaixo para instalar as bibliotecas que o script precisa para funcionar. Este comando instalará `mnemonic`, `bip_utils` e `qrcode` com seu complemento de imagem.
+  ```
 pip install mnemonic bip_utils "qrcode[pil]"
 
-
-
-Pronto! O ambiente está configurado e você já pode utilizar o programa.
+```
+  Pronto! O ambiente está configurado e você já pode utilizar o programa.
