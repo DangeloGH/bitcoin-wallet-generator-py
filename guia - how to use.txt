@@ -1,92 +1,49 @@
-🚀 Guia de Uso do Programa
+*🚀 Guia de Uso do Programa*
 
-Este guia explica como executar o gerador de carteira e utilizar suas principais funcionalidades. Lembre-se: para gerar carteiras que guardarão fundos reais, execute todos os passos em um computador seguro e desconectado da internet.
-
-
-1. Executando o Script
+ Este guia explica como executar o gerador de carteira e utilizar suas principais funcionalidades. *Lembre-se: para gerar carteiras que guardarão fundos reais, execute todos os passos em um computador seguro e desconectado da internet.*
 
 
-Abra um terminal (Prompt de Comando, PowerShell, etc.).
 
-Navegue com o comando cd até a pasta onde o script carteira_btc.py está localizado.
+*1. Executando o Script*
 
-Execute o programa com o comando:
+  - Abra um terminal (Prompt de Comando, PowerShell, etc.).
+ - Navegue com o comando `cd` até a pasta onde o script `carteira_btc.py` está localizado.
+ - Execute o programa com o comando:```
 python carteira_btc.py
 
+```
+ 
 
+*2. O Menu Principal*
 
-2. O Menu Principal
+ Ao iniciar, o programa exibirá um menu com as seguintes opções:
 
-Ao iniciar, o programa exibirá um menu com as seguintes opções:
+  - *`[1] Gerar uma NOVA carteira`:* Use esta opção para criar uma nova seed phrase aleatória e as carteiras associadas a ela. *Este é o ponto de partida para uma nova carteira.*
+ - *`[2] Restaurar / Visualizar uma carteira EXISTENTE`:* Use esta opção se você *já tem* uma seed phrase e quer apenas visualizar os detalhes (XPUB, endereços, chaves privadas).
+ - *`[3] Sair`:* Encerra o programa.
+ 
 
+*3. Guia: Gerando uma NOVA Carteira (Opção 1)*
 
+ Ao escolher a opção `1`, o programa seguirá estes passos:
 
-[1] Gerar uma NOVA carteira: Use esta opção para criar uma nova seed phrase aleatória e as carteiras associadas a ela. Este é o ponto de partida para uma nova carteira.
+  - *Exibição da Seed Phrase:* O programa gerará e exibirá 24 palavras em inglês.
 
-[2] Restaurar / Visualizar uma carteira EXISTENTE: Use esta opção se você já tem uma seed phrase e quer apenas visualizar os detalhes (XPUB, endereços, chaves privadas).
+  - *AÇÃO CRÍTICA:* Anote estas 24 palavras em um meio físico (papel, metal), na ordem exata. Este é seu backup mestre.
+ - *Criação da Passphrase (Senha):* O programa pedirá que você digite uma passphrase.
 
-[3] Sair: Encerra o programa.
+  - *Se você digitar uma senha (e confirmá-la):* O programa ativará o *Modo de Segurança Avançado*. Ele gerará: - Uma *CARTEIRA ISCA* simplificada (com 1 endereço), baseada apenas nas 24 palavras.
+ - Uma *CARTEIRA PRINCIPAL* completa (com 10 endereços), baseada nas 24 palavras + sua senha secreta.
+ - *Se você NÃO digitar uma senha (pressionar Enter):* O programa ativará o *Modo Padrão*. Ele gerará: - Uma única *CARTEIRA PADRÃO* completa (com 10 endereços), baseada apenas nas 24 palavras.
+ - *Resultado Final:* O programa exibirá na tela todos os detalhes da(s) sua(s) carteira(s), incluindo a XPUB (para importação em carteiras "watch-only"), os caminhos de derivação, os endereços públicos e as chaves privadas correspondentes.
+ - *QR Codes:* Para cada endereço gerado, uma imagem de QR Code será salva automaticamente em uma nova pasta chamada `QR_CODES`, facilitando o uso para receber fundos.
+ 
 
+*4. Guia: Restaurando uma Carteira EXISTENTE (Opção 2)*
 
-3. Guia: Gerando uma NOVA Carteira (Opção 1)
+ Ao escolher a opção `2`, o processo é o seguinte:
 
-Ao escolher a opção 1, o programa seguirá estes passos:
-
-
-
-Exibição da Seed Phrase: O programa gerará e exibirá 24 palavras em inglês.
-
-
-
-AÇÃO CRÍTICA: Anote estas 24 palavras em um meio físico (papel, metal), na ordem exata. Este é seu backup mestre.
-
-
-
-Criação da Passphrase (Senha): O programa pedirá que você digite uma passphrase.
-
-
-
-Se você digitar uma senha (e confirmá-la): O programa ativará o Modo de Segurança Avançado. Ele gerará:
-
-Uma CARTEIRA ISCA simplificada (com 1 endereço), baseada apenas nas 24 palavras.
-
-Uma CARTEIRA PRINCIPAL completa (com 10 endereços), baseada nas 24 palavras + sua senha secreta.
-
-
-
-Se você NÃO digitar uma senha (pressionar Enter): O programa ativará o Modo Padrão. Ele gerará:
-
-Uma única CARTEIRA PADRÃO completa (com 10 endereços), baseada apenas nas 24 palavras.
-
-
-
-
-
-Resultado Final: O programa exibirá na tela todos os detalhes da(s) sua(s) carteira(s), incluindo a XPUB (para importação em carteiras "watch-only"), os caminhos de derivação, os endereços públicos e as chaves privadas correspondentes.
-
-
-
-QR Codes: Para cada endereço gerado, uma imagem de QR Code será salva automaticamente em uma nova pasta chamada QR_CODES, facilitando o uso para receber fundos.
-
-
-
-
-4. Guia: Restaurando uma Carteira EXISTENTE (Opção 2)
-
-Ao escolher a opção 2, o processo é o seguinte:
-
-
-
-Inserir a Seed Phrase: O programa pedirá que você digite ou cole suas 12, 15, 18, 21 ou 24 palavras (separadas por espaço).
-
-Inserir a Passphrase: Em seguida, ele pedirá a passphrase da sua carteira secreta.
-
-Se sua carteira não tem passphrase, deixe este campo em branco (pressione Enter).
-
-Se você digitar a passphrase correta, o programa mostrará tanto a carteira base (sem senha) quanto a carteira secreta correspondente.
-
-
-
-
-O programa exibirá os detalhes da(s) carteira(s) recuperada(s), permitindo que você verifique os endereços e chaves a qualquer momento.
-
+  - *Inserir a Seed Phrase:* O programa pedirá que você digite ou cole suas 12, 15, 18, 21 ou 24 palavras (separadas por espaço).
+ - *Inserir a Passphrase:* Em seguida, ele pedirá a passphrase da sua carteira secreta. - Se sua carteira não tem passphrase, deixe este campo em branco (pressione Enter).
+ - Se você digitar a passphrase correta, o programa mostrará tanto a carteira base (sem senha) quanto a carteira secreta correspondente.
+  O programa exibirá os detalhes da(s) carteira(s) recuperada(s), permitindo que você verifique os endereços e chaves a qualquer momento.
